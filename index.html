@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contagem de Vogais</title>
+  <script>
+    function contarVogais() {
+      const str = document.getElementById('inputTexto').value.toLowerCase();
+      const vogais = ['a', 'e', 'i', 'o', 'u'];
+      let contador = 0;
+      
+      for (let i = 0; i < str.length; i++) {
+        if (vogais.includes(str[i])) {
+          contador++;
+        }
+      }
+      
+      document.getElementById('resultado').textContent = 'Quantidade de vogais: ' + contador;
+    }
+  </script>
+</head>
+<body>
+  <h1>Contagem de Vogais</h1>
+  <input type="text" id="inputTexto" placeholder="Digite uma frase">
+  <button onclick="contarVogais()">Contar Vogais</button>
+  <p id="resultado"></p>
+</body>
+</html>
